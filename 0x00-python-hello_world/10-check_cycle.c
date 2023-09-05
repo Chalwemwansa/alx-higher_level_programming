@@ -14,10 +14,8 @@ int check_cycle(listint_t *list)
 	head = list;
 	check = list;
 	tail = (*list).next;
-	for (i = 0;; i++)
+	for (i = 0; (*tail).next != NULL && tail != NULL; i++)
 	{
-		if ((*tail).next == NULL)
-			break;
 		for (j = 0; j <= i; j++)
 		{
 			if ((*tail).next == check)
