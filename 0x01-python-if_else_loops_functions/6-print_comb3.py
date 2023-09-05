@@ -8,10 +8,10 @@ for i in range(0, 100):
         second = (i * -1) % 10
         second = second * -1
     num = (second * 10) + first
-    if (not(num <= i)):
-        if (i < 10 and not(i == 89)):
-            print(f"{zer}{i}, ", end="")
-        elif (i >= 10 and not(i == 89)):
-            print(f"{i}, ", end="")
+    if (not (num <= i)):
+        if (i < 10 and not (i == 89)):
+            print("{}{}, ".format(zer, i), end="")
+        elif (i >= 10 and not (i == 89)):
+            print("{}, ".format(i), end="")
         else:
-            print(f"{i}")
+            print("{}".format(i))
