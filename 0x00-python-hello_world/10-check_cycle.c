@@ -9,12 +9,12 @@ int check_cycle(listint_t *list)
 	int j, i;
 	listint_t *head, *check, *tail;
 
-	if (list == NULL)
+	if (list == NULL || (*list).next == NULL)
 		return (0);
 	head = list;
 	check = list;
 	tail = (*list).next;
-	for (i = 0; (*tail).next != NULL && tail != NULL; i++)
+	for (i = 0; (*tail).next != NULL; i++)
 	{
 		for (j = 0; j <= i; j++)
 		{
