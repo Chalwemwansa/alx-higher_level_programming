@@ -6,16 +6,26 @@
  */
 int check_cycle(listint_t *list)
 {
-	char *str = (char *)(*list).next;
-	int p = (*list).n, i = 0;
+	int j, i;
+	listint_t *head, *check, *tail;
 
-	for (; list != NULL; list = (*list).next)
+	if (list == NULL)
+		return (0);
+	head = list;
+	check = list;
+	tail = (*list).next;
+	for (i = 0;; i++)
 	{
-		if ((*list).next == NULL)
+		if ((*tail).next == NULL)
 			break;
-		if (i != 0 && strcmp((char *)(*list).next, str) == 0 && (*list).n == p)
-			return (1);
-		i++;
+		for (j = 0; j <= i; j++)
+		{
+			if ((*tail).next == check)
+				return (1);
+			check = (*check).next;
+		}
+		tail = (*tail).next;
+		check = head;
 	}
 	return (0);
 }
