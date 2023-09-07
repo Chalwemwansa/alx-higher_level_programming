@@ -6,18 +6,22 @@ if __name__ == "__main__":
     if (length != 3):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    a = sys.argv[1]
-    b = sys.argv[3]
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
     operator = sys.argv[2]
     match operator:
         case '+':
-            result = add(int(a), int(b))
+            result = add(a, b)
+            break
         case '-':
-            result = sub(int(a), int(b))
-        case '*':
-            result = mul(int(a), int(b))
+            result = sub(a, b)
+            break
+        case "*":
+            result = mul(a, b)
+            break
         case '/':
-            result = div(int(a), int(b))
+            result = div(a, b)
+            break
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
