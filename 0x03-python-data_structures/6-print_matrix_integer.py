@@ -5,9 +5,8 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(0, max):
         max1 = len(matrix[i])
         for j in range(0, (max1 - 1)):
-            print("{0}".format(matrix[i][j]), end=" ")
+            print("{:d}".format(matrix[i][j]), end=" ")
         if (max1 - 1) < 0:
-            p = ''
+            print()
         else:
-            p = matrix[i][(max1 - 1)]
-        print("{0}".format(p))
+            print("{:d}".format(matrix[i][(max1 - 1)]))
