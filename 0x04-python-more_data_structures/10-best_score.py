@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if isinstance(a_dictionary, dict):
+    if isinstance(a_dictionary, dict) or not (len(a_dictionary) == 0):
         score = next(iter(a_dictionary))
     else:
         return (None)
