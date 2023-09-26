@@ -5,6 +5,9 @@
 
 
 class Square:
+    """Square class
+    """
+
     def __init__(self, size=0, position=(0, 0)):
         if not isinstance(position, tuple) or not (len(position) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
