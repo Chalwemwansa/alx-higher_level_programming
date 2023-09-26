@@ -1,13 +1,16 @@
+#!/usr/bin/python3
 """
     python3 -c 'print(__import__("my_module").MyClass.__doc__)'
 """
+
+
 class Square:
     def __init__(self, size=0, position=(0, 0)):
-        if not (type(position) == tuple) or not (len(position) == 2):
+        if not isinstance(position, tuple) or not (len(position) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
-        if not (type(size) == int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
@@ -23,7 +26,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if not (type(value) == int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -48,7 +51,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not (type(value) == tuple) or not (len(value) == 2):
+        if not (isinstance(value, tuple)) or not (len(value) == 2):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
