@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+import the 'add_integer' function from the '0-add_integer' file
+
+>>>from add_integer import add_integer
+
+>>>add_integer(7, 7)
+14
+
+>>>add_integer(-2, -1)
+-3
+
+>>>add_integer(1, -1)
+0
+
+>>>add_integer(0, 'i')
+traceback (most recent call last):
+	...	 #doctest: +ELLIPSIS
+TypeError: ... must be an integer
+
+>>>add_integer('i', 0)
+traceback (most recent call last): #doctest: +ELLIPSIS
+	...
+TypeError: ... must be an integer
+
+>>>add_integer('i', 'i')
+traceback (most recent call last): #doctest: +ELLIPSIS
+	...
+TypeError: ... must be an integer
