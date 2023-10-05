@@ -64,4 +64,3 @@ class Rectangle:
     def __repr__(self):
         temp = "Rectangle(" + f"{self.width}" + ", " + f"{self.height}" + ")"
         return (temp)
-
