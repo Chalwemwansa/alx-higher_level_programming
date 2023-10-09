@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+"""python3 -c 'print(__import__("my_module").MyClass.__doc__)'
+"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+class Rectangle(BaseGeometry):
+    """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__
+    """
+
+    def __init__(self, width, height):
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
+        self.__width = width
+        self.__height = height
