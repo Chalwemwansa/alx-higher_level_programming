@@ -4,4 +4,7 @@
 
 
 def is_kind_of_class(obj, a_class):
+    """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__
+    """
+
     return (isinstance(obj, a_class))
