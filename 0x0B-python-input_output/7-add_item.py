@@ -7,8 +7,8 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 filename = "add_item.json"
-with open(filename, 'a+') as fd:
-    pass;
+fd = open(filename, 'w')
+fd.close
 list = list(load_from_json_file(filename))
 for i in range(1, len(sys.argv)):
     list.append(sys.argv[i])
