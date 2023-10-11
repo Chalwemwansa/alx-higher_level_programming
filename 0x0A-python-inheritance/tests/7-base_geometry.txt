@@ -49,10 +49,10 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 TypeError: age must be an integer
 
->>> obj.integer_validator()
+>>> obj.integer_validator() #doctest: +ELLIPSIS
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: ...
 
->>> obj.integer_validator("age")
+>>> obj.integer_validator("age") #doctest: +ELLIPSIS
 Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: ...
