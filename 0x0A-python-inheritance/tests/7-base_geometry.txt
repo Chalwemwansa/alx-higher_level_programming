@@ -11,6 +11,10 @@ import the module containing the function to be tested
 Traceback (most recent call last):
 Exception: area() is not implemented
 
+obj.integer_validator()
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
 obj.area(9)
 Traceback (most recent call last):
 TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
@@ -52,10 +56,6 @@ TypeError: age must be an integer
 obj.integer_validator("age", {7, 9})
 Traceback (most recent call last):
 TypeError: age must be an integer
-
-obj.integer_validator()
-Traceback (most recent call last):
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 obj.integer_validator("age")
 Traceback (most recent call last):
