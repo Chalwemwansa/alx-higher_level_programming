@@ -5,6 +5,17 @@
 
 class BaseGeometry:
     """python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__
+    >>> obj = BaseGeometry()
+
+    >>> obj.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> obj.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> obj.integer_validator("age", 89)
     """
 
     def area(self):
