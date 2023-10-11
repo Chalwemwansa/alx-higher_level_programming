@@ -8,12 +8,17 @@ class Student:
     """
 
     def __init__(self, first_name, last_name, age):
-        if not (isinstance(first_name, str)) or not (isinstance(last_name, str)):
-            raise TypeError("first and last name should be string")
+        """
+        if not (isinstance(first_name, str)):
+            raise TypeError("first_name should be string")
+        or not (isinstance(last_name, str)):
+            raise TypeError("last_name should be string")
         if not (isinstance(age, int)):
             raise TypeError("Age must be an int")
         if age < 0:
             raise ValueError("age must be greater than or equal to 0")
+        """
+
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
