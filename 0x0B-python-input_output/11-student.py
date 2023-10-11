@@ -34,12 +34,14 @@ class Student:
             return (self.__dict__)
 
     def reload_from_json(self, json):
-        if len(json) == 3:
-            first_name = json.get('first_name')
-            print(first_name)
-            last_name = json.get('last_name')
-            age = json.get('age')
+        first_name = json.get('first_name')
+        print(first_name)
+        last_name = json.get('last_name')
+        age = json.get('age')
 
+        if not (first_name is None):
             self.first_name = first_name
+        if not (last_name is None):
             self.last_name = last_name
+        if not (age is None):
             self.age = age
