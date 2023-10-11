@@ -35,9 +35,8 @@ class Student:
 
     def reload_from_json(self, json):
         if not (len(json) == 3):
-            return;
+            return
         my_list = list(json.values())
-        print(my_list)
         first_name = my_list[0]
         last_name = my_list[1]
         age = my_list[2]
