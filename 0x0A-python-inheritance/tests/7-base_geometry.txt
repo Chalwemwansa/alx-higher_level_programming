@@ -11,19 +11,19 @@ import the module containing the function to be tested
 Traceback (most recent call last):
 Exception: area() is not implemented
 
->>> obj.integer_validator("width", 89)
+>>> obj.integer_validator("age", 89)
 
->>> obj.integer_validator("width", -89)
+>>> obj.integer_validator("age", -89)
 Traceback (most recent call last):
-ValueError: width must be greater than 0
+ValueError: age must be greater than 0
 
->>> obj.integer_validator("width", "hi")
+>>> obj.integer_validator("age", "hi")
 Traceback (most recent call last):
-TypeError: width must be an integer
+TypeError: age must be an integer
 
->>> obj.integer_validator("width", 0)
+>>> obj.integer_validator("age", 0)
 Traceback (most recent call last):
-ValueError: width must be greater than 0
+ValueError: age must be greater than 0
 
 >>> obj.integer_validator()
 Traceback (most recent call last):
@@ -41,11 +41,11 @@ TypeError: width must be an integer
 Traceback (most recent call last):
 TypeError: width must be an integer
 
->>> obj.integer_validator("width", False)
+>>> obj.integer_validator("width", True)
 Traceback (most recent call last):
 TypeError: width must be an integer
 
->>> obj.integer_validator("width", {7, 9, 7})
+>>> obj.integer_validator("width", {7, 9})
 Traceback (most recent call last):
 TypeError: width must be an integer
 
