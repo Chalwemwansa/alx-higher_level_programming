@@ -32,3 +32,8 @@ try:
     bg.integer_validator("width", (4,))
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+        bg.area(9)
+except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
