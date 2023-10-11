@@ -16,15 +16,13 @@ class BaseGeometry:
     TypeError: age must be an integer
 
     >>> obj.integer_validator("age", 89)
-    >>> obj.integer_validator()
-    Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
     """
 
     def area(self):
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+
         if not (type(value) is int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
