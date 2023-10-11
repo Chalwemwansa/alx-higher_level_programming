@@ -16,7 +16,7 @@ class BaseGeometry:
     TypeError: age must be an integer
 
     >>> obj.integer_validator("age", 89)
-    obj.integer_validator()
+    >>> obj.integer_validator()
     Traceback (most recent call last):
     TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
     """
