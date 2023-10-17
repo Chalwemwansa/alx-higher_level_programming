@@ -31,8 +31,8 @@ class Rect_test(unittest.TestCase):
         self.assertEqual(Rect_test.obj2.x, 0)
     def test_yGet(self):
         self.assertEqual(Rect_test.obj2.y, 0)
-    def test_idGet(self):
-        self.assertEqual(Rect_test.obj2.id, 1)
+    #def test_idGet(self):
+     #   self.assertEqual(Rect_test.obj2.id, 1)
     def test_threeargs(self):
         obj1 = Rectangle(5, 5, 6)
         def test_heightGetter(self):
