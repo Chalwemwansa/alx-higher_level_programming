@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """python3 -c 'print(__import__("my_module").MyClass.__doc__)'
 """
-from models.base import Base
 from json import loads
+from models.base import Base
 
 
 class Rectangle(Base):
     """class that makes a rectagle and inherits from base class
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         if not isinstance(width, int):
