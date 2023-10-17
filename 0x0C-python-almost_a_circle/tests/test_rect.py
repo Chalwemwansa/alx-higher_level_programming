@@ -23,17 +23,16 @@ class Rect_test(unittest.TestCase):
         self.assertEqual(Rect_test.obj1.y, 10)
     def test_idGetter(self):
         self.assertEqual(Rect_test.obj1.id, 40)
-    def test_twoargs(self):
-        def test_widthGetter(self):
-            self.assertEqual(Rect_test.obj2.width, 1)
-        def test_heightGetter(self):
-            self.assertEqual(Rect_test.obj2.height, 2)
-        def test_xGetter(self):
-            self.assertEqual(Rect_test.obj2.x, 0)
-        def test_yGetter(self):
-            self.assertEqual(Rect_test.obj2.y, 0)
-        def test_idGetter(self):
-            self.assertEqual(Rect_test.obj2.id, 1)
+    def test_widthGet(self):
+        self.assertEqual(Rect_test.obj2.width, 1)
+    def test_heightGet(self):
+        self.assertEqual(Rect_test.obj2.height, 2)
+    def test_xGet(self):
+        self.assertEqual(Rect_test.obj2.x, 0)
+    def test_yGet(self):
+        self.assertEqual(Rect_test.obj2.y, 0)
+    def test_idGet(self):
+        self.assertEqual(Rect_test.obj2.id, 1)
     def test_threeargs(self):
         obj1 = Rectangle(5, 5, 6)
         def test_heightGetter(self):
