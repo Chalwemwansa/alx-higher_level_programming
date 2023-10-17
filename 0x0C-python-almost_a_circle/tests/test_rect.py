@@ -65,3 +65,19 @@ class Rect_test(unittest.TestCase):
             Rectangle(1, 2, -3)
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
+    def test_area(self):
+        self.assertEqual(Rect_test.obj1.area(), 25)
+
+    def test_string(self):
+        my_str = str(Rect_test.obj1)
+        my_cmp = '[Rectangle] (40) 6/10 - 5/5'
+        self.assertEqual(my_str, my_cmp)
+    def test_Display(self):
+        obj = Rectangle(5, 2)
+        my_str = '#####\n#####'
+        self.assertEqual(print(my_str), obj.display())
+
+    def test_disply(self):
+        obj = Rectangle(5, 2, 1)
+        my_str = ' #####\n #####'
+        self.assertEqual(print(my_str), obj.display())
