@@ -81,3 +81,93 @@ class Rect_test(unittest.TestCase):
         obj = Rectangle(5, 2, 1)
         my_str = ' #####\n #####'
         self.assertEqual(print(my_str), obj.display())
+
+    def test_todictionary(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dictionary = r1.to_dictionary()
+        r1_cmp = {'x': 1, 'y': 9, 'id': 10, 'height': 2, 'width': 10}
+        self.assertEqual(r1_dictionary, r1_cmp)
+
+    def test_update(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update()
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.height, 2)
+
+    def test_update1(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(2)
+        self.assertEqual(r1.id, 2)
+
+    def test_update_2(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(3, 4)
+        self.assertEqual(r1.id, 3)
+        self.assertEqual(r1.width, 4)
+
+    def test_update_3(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(3, 4, 5)
+        self.assertEqual(r1.id, 3)
+        self.assertEqual(r1.width, 4)
+        self.assertEqual(r1.height, 5)
+
+    def test_update_4(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(3, 4, 5, 6)
+        self.assertEqual(r1.id, 3)
+        self.assertEqual(r1.width, 4)
+        self.assertEqual(r1.height, 5)
+        self.assertEqual(r1.x, 6)
+
+    def test_update_5(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(3, 4, 5, 6, 7)
+        self.assertEqual(r1.id, 3)
+        self.assertEqual(r1.width, 4)
+        self.assertEqual(r1.height, 5)
+        self.assertEqual(r1.x, 6)
+        self.assertEqual(r1.y, 7)
+
+    def test_update_6(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        r1.update(**{'id': 50})
+        self.assertEqual(r1.id, 50)
+
+    def test_update_7(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.width, 10)
+        r1.update(**{'id': 50, 'width': 49})
+        self.assertEqual(r1.id, 50)
+        self.assertEqual(r1.width, 49)
+
+    def test_update_8(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.width, 10)
+        r1.update(**{'id': 50, 'width': 49, 'height': 48})
+        self.assertEqual(r1.id, 50)
+        self.assertEqual(r1.width, 49)
+        self.assertEqual(r1.height, 48)
+
+    def test_updtae_9(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.width, 10)
+        r1.update(**{'id': 50, 'width': 49, 'height': 48, 'x': 47})
+        self.assertEqual(r1.id, 50)
+        self.assertEqual(r1.width, 49)
+        self.assertEqual(r1.height, 48)
+        self.assertEqual(r1.x, 47)
+
+    def test_update_10(self):
+        r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.width, 10)
+        r1.update(**{'id': 50, 'width': 49, 'height': 48, 'x': 47, 'y': 46})
+        self.assertEqual(r1.id, 50)
+        self.assertEqual(r1.width, 49)
+        self.assertEqual(r1.height, 48)
+        self.assertEqual(r1.x, 47)
+        self.assertEqual(r1.y, 46)
