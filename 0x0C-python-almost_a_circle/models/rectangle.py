@@ -81,9 +81,14 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """the area function that computes the area of the
+        insatnce or object and returns its area
+        """
         return (self.height * self.width)
 
     def display(self):
+        """the display function that prints the area using the symbol #
+        """
         for y in range(self.y):
             print()
         for i in range(self.height):
@@ -94,10 +99,16 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """the __str__ method that changes what is printed when an object is
+        passed as parameter to the print function in python
+        """
         my_str = f"({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
         return ("[Rectangle] " + my_str)
 
     def update(self, *args, **kwargs):
+        """updates the members of the object to the values that the user
+        wants to set them to
+        """
         if not (len(kwargs) == 0):
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -114,6 +125,9 @@ class Rectangle(Base):
                 self.y = args[i]
 
     def to_dictionary(self):
+        """converts a json string of the dictionary format into
+        an actual dictioanry obj
+        """
         my_str = "{" + '"id": {}, "width": {}, "height": {}, "x": {}, "y": {}\
             '.format(self.id, self.width, self.height, self.x, self.y) + "}"
         return (loads(my_str))
