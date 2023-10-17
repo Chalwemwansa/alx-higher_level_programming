@@ -44,9 +44,11 @@ class Rect_test(unittest.TestCase):
         def test_yGetter(self):
             self.assertEqual(obj1.y, 10)
     def test_errors(self):
-        #self.assertRaises(TypeError, Rectangle("1", 2))
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
+        with self.assertRaises(TypeError):
             Rectangle(1, "2")
-            #obj4 = Rectangle(1, 2, "3")
-            #obj5 = Rectangle(1, 2, 3, "4")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "4")
