@@ -90,23 +90,27 @@ class Rect_test(unittest.TestCase):
 
     def test_update(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 11)
         r1.update()
         self.assertEqual(r1.width, 10)
         self.assertEqual(r1.height, 2)
 
     def test_update1(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 12)
         r1.update(2)
         self.assertEqual(r1.width, 10)
 
     def test_update_2(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 14)
         r1.update(3, 4)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.width, 4)
 
     def test_update_3(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 15)
         r1.update(3, 4, 5)
         self.assertEqual(r1.x, 1)
         self.assertEqual(r1.width, 4)
@@ -114,6 +118,7 @@ class Rect_test(unittest.TestCase):
 
     def test_update_4(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 16)
         r1.update(3, 4, 5, 6)
         self.assertEqual(r1.y, 9)
         self.assertEqual(r1.width, 4)
@@ -122,6 +127,7 @@ class Rect_test(unittest.TestCase):
 
     def test_update_5(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 17)
         r1.update(3, 4, 5, 6, 7)
         self.assertEqual(r1.width, 4)
         self.assertEqual(r1.height, 5)
@@ -138,11 +144,13 @@ class Rect_test(unittest.TestCase):
         r1 = Rectangle(10, 2, 1, 9)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.id, 19)
         r1.update(**{'id': 50, 'width': 49})
         self.assertEqual(r1.width, 49)
 
     def test_update_8(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 20)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.width, 10)
         r1.update(**{'id': 50, 'width': 49, 'height': 48})
@@ -151,6 +159,7 @@ class Rect_test(unittest.TestCase):
 
     def test_updtae_9(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 21)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.width, 10)
         r1.update(**{'id': 50, 'width': 49, 'height': 48, 'x': 47})
@@ -160,6 +169,7 @@ class Rect_test(unittest.TestCase):
 
     def test_update_10(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 13)
         self.assertEqual(r1.height, 2)
         self.assertEqual(r1.width, 10)
         r1.update(**{'id': 50, 'width': 49, 'height': 48, 'x': 47, 'y': 46})
