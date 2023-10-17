@@ -2,12 +2,12 @@
 """python3 -c 'print(__import__("my_module").MyClass.__doc__)'
 """
 from json import loads
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """class that makes a square and inherits from rectangle
     """
-
 
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
