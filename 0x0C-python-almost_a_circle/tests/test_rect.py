@@ -47,6 +47,6 @@ class Rect_test(unittest.TestCase):
         #self.assertRaises(TypeError, Rectangle("1", 2))
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
-            #obj3 = Rectangle(1, "2")
+            Rectangle(1, "2")
             #obj4 = Rectangle(1, 2, "3")
             #obj5 = Rectangle(1, 2, 3, "4")
