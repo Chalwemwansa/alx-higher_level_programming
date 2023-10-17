@@ -22,3 +22,7 @@ class Base_test(unittest.TestCase):
         my_str = Base.to_json_string(my_dict)
         cmp_str = '[{"i know": "cool", "kayla": "kay"}, {"school": "cool", "chalwe": "mazasaka"}]'
         self.assertEqual(my_str, cmp_str)
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string('[]'), [])
+        my_dict = Base.from_json_string('[{"id": 89}]')
+        self.assertEqual(my_dict, [{'id': 89 }])

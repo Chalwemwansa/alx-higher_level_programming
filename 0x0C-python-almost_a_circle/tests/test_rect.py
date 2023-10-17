@@ -22,3 +22,27 @@ class Rect_test(unittest.TestCase):
         self.assertEqual(Rect_test.obj1.y, 10)
     def test_idGetter(self):
         self.assertEqual(Rect_test.obj1.id, 40)
+    def test_twoargs(self):
+        obj1 = Rectangle(5, 5)
+        def test_widthGetter(self):
+            self.assertEqual(Rect_test.obj1.width, 5)
+        def test_heightGetter(self):
+            self.assertEqual(Rect_test.obj1.height, 5)
+    def test_threeargs(self):
+        obj1 = Rectangle(5, 5, 6)
+        def test_heightGetter(self):
+            self.assertEqual(Rect_test.obj1.height, 5)
+        def test_xGetter(self):
+            self.assertEqual(Rect_test.obj1.x, 6)
+    def test_fourargs(self):
+        obj1 = Rectangle(5, 5, 6, 10)
+        def test_widthGetter(self):
+            self.assertEqual(Rect_test.obj1.width, 5)
+        def test_yGetter(self):
+            self.assertEqual(Rect_test.obj1.y, 10)
+    def test_errors(self):
+        with self.assertRaises(TypeError):
+            obj2 = Rectangle("1", 2)
+            obj3 = Rectangle(1, "2")
+            obj4 = Rectangle(1, 2, "3")
+            obj5 = Rectangle(1, 2, 3, "4")
