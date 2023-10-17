@@ -13,6 +13,10 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """ the __str__ function that changes the print of the object
+        when an object is passed as an argument to the print function in
+        python
+        """
         my_str = f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
         return (my_str)
 
@@ -26,6 +30,9 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """the update function in the class that updates the
+        previous entries that were present
+        """
         if not (len(args) == 0):
             for i in range(len(args)):
                 if i == 0:
@@ -43,6 +50,9 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """the to_dictionary function that
+        converts a json string to an actual dictionary in python
+        """
         my_str = "{" + '"id": {}, "size": {}, "x": {}, "y": {}\
         '.format(self.id, self.width, self.x, self.y) + "}"
         return (loads(my_str))
