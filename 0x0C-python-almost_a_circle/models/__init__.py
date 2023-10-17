@@ -1,1 +1,1 @@
-__all__ = ["base", "Rectangle"]
+__all__ = ["base", "rectangle", "square"]
