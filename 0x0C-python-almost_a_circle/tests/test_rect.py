@@ -130,6 +130,7 @@ class Rect_test(unittest.TestCase):
 
     def test_update_6(self):
         r1 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1.id, 18)
         r1.update(**{'id': 50})
         self.assertEqual(r1.height, 2)
 
