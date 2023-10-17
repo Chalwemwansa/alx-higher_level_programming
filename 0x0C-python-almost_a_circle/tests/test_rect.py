@@ -28,6 +28,12 @@ class Rect_test(unittest.TestCase):
             self.assertEqual(Rect_test.obj1.width, 1)
         def test_heightGetter(self):
             self.assertEqual(Rect_test.obj1.height, 2)
+        def test_xGetter(self):
+            self.assertEqual(Rect_test.obj1.x, 0)
+        def test_yGetter(self):
+            self.assertEqual(Rect_test.obj1.y, 0)
+        def test_idGetter(self):
+            self.assertEqual(Rect_test.obj1.id, 1)
     def test_threeargs(self):
         obj1 = Rectangle(5, 5, 6)
         def test_heightGetter(self):
