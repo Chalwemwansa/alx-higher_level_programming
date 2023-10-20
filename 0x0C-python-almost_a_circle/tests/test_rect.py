@@ -21,10 +21,10 @@ class Rect_test(unittest.TestCase):
         self.assertEqual(Rect_test.obj1.x, 6)
     def test_yGetter(self):
         self.assertEqual(Rect_test.obj1.y, 10)
-    """
     def test_idGetter(self):
+        """test for self id allocation
+        """
         self.assertEqual(Rect_test.obj1.id, 40)
-    """
     def test_widthGet(self):
         self.assertEqual(Rect_test.obj2.width, 1)
     def test_heightGet(self):
@@ -74,15 +74,12 @@ class Rect_test(unittest.TestCase):
         my_str = str(Rect_test.obj1)
         my_cmp = '[Rectangle] (40) 6/10 - 5/5'
         self.assertEqual(my_str, my_cmp)
-    def test_Display(self):
-        obj = Rectangle(5, 2)
-        my_str = '#####\n#####'
-        self.assertEqual(print(my_str), obj.display())
 
-    def test_disply(self):
-        obj = Rectangle(5, 2, 1)
-        my_str = ' #####\n #####'
-        self.assertEqual(print(my_str), obj.display())
+    def test_some(self):
+        my_str = str(Rect_test.obj1)
+        r1 = Rectangle(10, 2, 1, 9)
+        r2 = Rectangle(10, 2, 1, 9)
+        self.assertEqual(r1 is r2, False)
 
     def test_todictionary(self):
         r1 = Rectangle(10, 2, 1, 9)
