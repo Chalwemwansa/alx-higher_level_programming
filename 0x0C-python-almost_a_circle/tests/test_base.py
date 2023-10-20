@@ -15,8 +15,9 @@ class Base_test(unittest.TestCase):
     obj1 = Base()
     obj2 = Base(40)
     def test_id(self):
-        self.assertEqual(Base_test.obj2.id, 40)
         self.assertEqual(Base_test.obj1.id, 1)
+    def test_id2(self):
+        self.assertEqual(Base_test.obj2.id, 40)
     def test_toJasonString(self):
         my_dict = [{'i know': 'cool', 'kayla': 'kay'}, {'school': 'cool', 'chalwe': 'mazasaka'}]
         my_str = Base.to_json_string(my_dict)
