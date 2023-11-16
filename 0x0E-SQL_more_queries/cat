@@ -1,0 +1,6 @@
+-- shows the genres for the title DEXTER
+-- demonstrating the use of the SELECT and the join operations
+SELECT ts.title, tg.name
+FROM (tv_shows ts JOIN tv_show_genres tsg) LEFT OUTER JOIN tv_genres tg
+ON tsg.show_id = ts.id AND tsg.genre_id = tg.id
+ORDER BY ts.title, tg.name;
