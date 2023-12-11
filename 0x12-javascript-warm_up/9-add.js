@@ -1,10 +1,8 @@
 #!/bin/node
 
-function add (a, b) {
-  if (isNaN(a) || isNaN(b)) {
-    return ('NaN');
-  } else {
-    return parseInt(a, 10) + parseInt(b, 10);
-  }
+function add(a, b) {
+  return a + b;
 }
-console.log(`${add(process.argv[2], process.argv[3])}`);
+const first = parseInt(process.argv[2], 10);
+const second = parseInt(process.argv[3], 10);
+console.log(add(first, second));
