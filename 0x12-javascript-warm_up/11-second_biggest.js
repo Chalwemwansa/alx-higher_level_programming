@@ -10,4 +10,4 @@ for (let i = 2; i < process.argv.length; i++) {
     largest = num;
   }
 }
-console.log(`${secondLargest}`);
+console.log(secondLargest);
