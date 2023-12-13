@@ -9,6 +9,8 @@ for (let i = 1; i < len; i++) {
   if (largest < num) {
     secondLargest = largest;
     largest = num;
+  } else if (num > secondLargest && num < largest) {
+    secondLargest = num;
   }
 }
 console.log(secondLargest);
