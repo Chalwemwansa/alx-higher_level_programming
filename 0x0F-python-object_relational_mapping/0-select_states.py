@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-import MYSQLdb
+import MySQLdb
 from sys import argv
+"""python3 -c 'print(__import__("my_module").my_function.__doc__)'
+"""
+
 
 def connect(usr, paswd, database):
-    con = MySQLdb.connect(host="localhost", port=3306,\
-            user=usr, passwd=paswd, db=database, charset="utf-8")
+    """the function makes a connection to a database using python
+    """
+    con = MySQLdb.connect(host="localhost", port=3306,
+                          user=usr, passwd=paswd, db=database, charset="utf8")
 
     cur = con.cursor()
 
@@ -12,6 +17,7 @@ def connect(usr, paswd, database):
     resultSet = cur.fetchall()
     for tuple in resultSet:
         print(tuple)
+
 
 if __name__ == "__main__":
     connect(argv[1], argv[2], argv[3])
