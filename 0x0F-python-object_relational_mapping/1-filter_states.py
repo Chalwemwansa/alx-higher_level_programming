@@ -17,10 +17,13 @@ def connect(usr, paswd, database):
 
     cur = con.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", ('N%',))
-    resultSet = cur.fetchall()
-    for tuple in resultSet:
-        print(tuple)
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    try:
+        resultSet = cur.fetchall()
+        for tuple in resultSet:
+            print(tuple)
+    except MySQLdb.Error as e:
+        pass
     cur.close()
     con.close()
 
