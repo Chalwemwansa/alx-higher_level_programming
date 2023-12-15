@@ -19,4 +19,4 @@ if __name__ == "__main__":
     for tuple in result:
         print(tuple)
     cur.close()
-    con.close
+    con.close()
