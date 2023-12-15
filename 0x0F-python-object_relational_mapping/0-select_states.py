@@ -21,6 +21,8 @@ def connect(usr, paswd, database):
     resultSet = cur.fetchall()
     for tuple in resultSet:
         print(tuple)
+    cur.close()
+    con.close()
 
 
 if __name__ == "__main__":
