@@ -15,7 +15,8 @@ if __name__ == "__main__":
                           passwd=argv[2], db=argv[3])
     cur = con.cursor()
     cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
-    for tuple in cur.fetchall():
+    result = cur.fetchall()
+    for tuple in result:
         print(tuple)
     cur.close()
     con.close
