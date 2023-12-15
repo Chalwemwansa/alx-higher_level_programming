@@ -6,14 +6,14 @@ from sys import argv
 
 
 def connect(usr, paswd, database):
-    """the function makes a connection to a database using python
+    """python3 -c 'print(__import__("my_module").my_function.__doc__)'
     """
     con = MySQLdb.connect(host="localhost", port=3306,
                           user=usr, passwd=paswd, db=database, charset="utf8")
 
     cur = con.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     resultSet = cur.fetchall()
     for tuple in resultSet:
         print(tuple)
