@@ -2,11 +2,15 @@
 import MySQLdb
 from sys import argv
 """python3 -c 'print(__import__("my_module").my_function.__doc__)'
+    the module contains a function connect that establishes a connection to
+    a mysql database
 """
 
 
 def connect(usr, paswd, database):
     """python3 -c 'print(__import__("my_module").my_function.__doc__)'
+    the function establishes a connection to a mysqldb from python and allows
+    performing of querries using the function
     """
     con = MySQLdb.connect(host="localhost", port=3306,
                           user=usr, passwd=paswd, db=database)
