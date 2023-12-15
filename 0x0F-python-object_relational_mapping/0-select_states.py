@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import MySQLdb
-from sys import argv
 """python3 -c 'print(__import__("my_module").my_function.__doc__)'
     the module contains a function connect that establishes a connection to
     a mysql database
 """
+import MySQLdb
+from sys import argv
 
 
 def connect(usr, paswd, database):
