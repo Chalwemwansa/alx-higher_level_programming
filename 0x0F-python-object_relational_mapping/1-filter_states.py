@@ -17,7 +17,8 @@ def connect(usr, paswd, database):
 
     cur = con.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
+                 ORDER BY id ASC")
     try:
         resultSet = cur.fetchall()
         for tuple in resultSet:
