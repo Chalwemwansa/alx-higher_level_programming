@@ -9,11 +9,12 @@ from sys import argv
 if __name__ == "__main__":
     """section where the connection and execution of queries takes place from
     """
-    querry = "SELECT * FROM states WHERE name = %s"
+    querry = "SELECT * FROM states WHERE name = '{}' ORDER BY\
+             id ASC".format(argv[4])
     con = MySQLdb.connect(host="localhost", port=3306, passwd=argv[2],
                           user=argv[1], db=argv[3], charset='utf8')
     cur = con.cursor()
-    cur.execute(querry, (argv[4],))
+    cur.execute(querry)
     for row in cur.fetchall():
         print(row)
     cur.close()
