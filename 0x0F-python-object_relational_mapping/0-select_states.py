@@ -9,7 +9,7 @@ def connect(usr, paswd, database):
     """python3 -c 'print(__import__("my_module").my_function.__doc__)'
     """
     con = MySQLdb.connect(host="localhost", port=3306,
-                          user=usr, passwd=paswd, db=database, charset="utf8")
+                          user=usr, passwd=paswd, db=database)
 
     cur = con.cursor()
 
