@@ -20,4 +20,4 @@ if __name__ == "__main__":
     if row is not None:
         print(f"{row.id}: {row.name}")
     else:
-        pass
+        print("Nothing")
