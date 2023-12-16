@@ -13,7 +13,7 @@ if __name__ == "__main__":
     querry = """SELECT cities.name
                 FROM cities, states
                 WHERE state_id = states.id
-                AND states.name = %s
+                AND states.name LIKE BINARY %s
                 ORDER BY cities.id"""
     con = MySQLdb.connect(host="localhost", port=3306, passwd=argv[2],
                           user=argv[1], db=argv[3], charset="utf8")
