@@ -16,6 +16,8 @@ if __name__ == "__main__":
     session = Session()
 
     query = session.query(State)
-    result = query.order_by(asc(State.id))[:1]
-    for row in result:
+    row = query.order_by(asc(State.id)).first()
+    if row is not None:
         print(f"{row.id}: {row.name}")
+    else:
+        pass
