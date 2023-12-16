@@ -12,10 +12,10 @@ if __name__ == "__main__":
     """
     querry = """SELECT name
                 FROM cities
-                WHERE state_id = 
-                (SELECT states.id
-                FROM states
-                WHERE states.name LIKE BINARY %s
+                WHERE state_id = (
+                    SELECT id
+                    FROM states
+                    WHERE name LIKE BINARY %s
                 )
                 ORDER BY id"""
     con = MySQLdb.connect(host="localhost", port=3306, passwd=argv[2],
@@ -23,12 +23,7 @@ if __name__ == "__main__":
     cur = con.cursor()
     cur.execute(querry, (argv[4],))
     result = cur.fetchall()
-    length = len(result)
-    for row in range(length):
-        print(result[row][0], end="")
-        if row == length - 1:
-            print()
-        else:
-            print(", ", end="")
+    prt = ", ".join(value[0] for value in result)
+    print(prt)
     cur.close()
     con.close()
