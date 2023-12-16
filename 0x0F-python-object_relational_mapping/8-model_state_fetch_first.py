@@ -17,4 +17,5 @@ if __name__ == "__main__":
 
     query = session.query(State)
     result = query.order_by(asc(State.id)).limit(1)
-    print(f"{result[0].id}: {result[0].name}")
+    for row in result:
+        print(f"{row.id}: {row.name}")
