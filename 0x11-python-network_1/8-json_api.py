@@ -15,9 +15,10 @@ if __name__ == "__main__":
 
     try:
         data = request.json()
+        data.raise_for_status()
         if data is None or len(data) == 0:
             print("No result")
         else:
             print(f"[{data.get('id')}] {data.get('name')}")
     except requests.exceptions.JSONDecodeError:
-        print("Not avalid JSON")
+        print("Not a valid JSON")
