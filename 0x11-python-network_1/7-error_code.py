@@ -9,4 +9,5 @@ if __name__ == "__main__":
     if request.status_code >= 400:
         print(f"Error code: {request.status_code}")
     else:
-        print(request.decode('utf8'))
+        request.encoding = 'utf8'
+        print(request.text)
