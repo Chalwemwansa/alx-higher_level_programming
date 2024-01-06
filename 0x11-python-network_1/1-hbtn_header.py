@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ script that fetches data from a given url
-    and prints the value of a given variable
 """
 import urllib.request
 import sys
