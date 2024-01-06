@@ -1,0 +1,9 @@
+#!/bin/bash
+#script that makes files for the project
+
+for file in "$@"; do
+    touch "$file"; echo '#!/usr/bin/python3' > "$file"
+    echo '# this script ' >> "$file"
+    chmod u+x "$file"
+    echo "$file created"
+done
