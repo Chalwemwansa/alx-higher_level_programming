@@ -15,10 +15,9 @@ if __name__ == "__main__":
 
     try:
         data = request.json()
-        if data:
-            pass`
-            #print(f"[{data.get('id')}] {data.get('name')}")
-        else:
+        if data is None or len(data) == 0:
             print("No result")
+        else:
+            print(f"[{data.get('id')}] {data.get('name')}")
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")
