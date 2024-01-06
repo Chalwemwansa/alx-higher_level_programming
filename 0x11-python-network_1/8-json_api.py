@@ -1,2 +1,23 @@
 #!/usr/bin/python3
-# this script 
+""" this script sends a letter to a server through a post request
+"""
+import requests
+from sys import argv
+
+if __name__ == "__main__":
+    url = 'http://0.0.0.0:5000/search_user'
+    if len(argv) > 1:
+        value = argv[1]
+    else:
+        value = ""
+    my_data = {'q': value}
+    request = requests.post(url, data=my_data)
+
+    try:
+        data = request.json()
+        if data:
+            print(f"[{data.get('id')}] {data.get('name')}")
+        else:
+            print("No result")
+    except requests.exceptions.JSONDecodeError:
+        print("Not a valid JSON")
