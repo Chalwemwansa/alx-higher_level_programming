@@ -3,9 +3,9 @@
     and prints the value of a given variable
 """
 import urllib.request
-from sys import argv
+import sys
 
-request = urllib.request.Request(argv[1])
+request = urllib.request.Request(sys.argv[1])
 with urllib.request.urlopen(request) as request_data:
     r = request_data.headers
 print(r['X-Request-Id'])
