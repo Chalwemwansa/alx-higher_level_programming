@@ -2,7 +2,7 @@
 """ this script takes in an email address and sends
     a POST request to the given server
 """
-import urllib.request
+import requests
 from sys import argv
 
 if __name__ == "__main__":
