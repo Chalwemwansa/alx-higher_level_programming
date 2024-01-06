@@ -11,13 +11,11 @@ if __name__ == "__main__":
     else:
         value = ""
     my_data = {'q': value}
-    request = requests.post(url, data=my_data)
 
     try:
+        request = requests.post(url, data=my_data)
         data = request.json()
-        if data is None:
-            print("Not a valid JSON")
-        elif len(data) == 0:
+        if data is None or len(data) == 0:
             print("No result")
         else:
             print(f"[{data.get('id')}] {data.get('name')}")
