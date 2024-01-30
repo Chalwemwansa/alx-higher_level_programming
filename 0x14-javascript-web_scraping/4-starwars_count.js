@@ -11,8 +11,10 @@ request(url, (error, response, body) => {
     let sum = 0;
     const films = JSON.parse(body);
     for (const film of films.results) {
-      if (film.characters.includes(character)) {
-        sum += 1;
+      for (const characters of film.characters) {
+        if (characters === character) {
+          sum += 1;
+	}
       }
     }
     console.log(sum);
